@@ -23,7 +23,10 @@ const db = admin.database();
 
 // Inisialisasi Express
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://astha-project-nine.vercel.app',
+  methods: ['GET', 'POST']
+}));
 app.use(express.json());
 
 // Konfigurasi OneSignal
